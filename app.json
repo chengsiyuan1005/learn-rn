@@ -3,7 +3,7 @@
     "name": "hc-bms-app",
     "slug": "hc-bms-app",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default", // portrait -- 纵向, default -- 支持两个方向
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {

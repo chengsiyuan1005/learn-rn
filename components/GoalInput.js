@@ -16,11 +16,23 @@ const GoalInput = (props) => {
           style={styles.inputStyle}
           onChangeText={handlerInput}
         />
-        <Button style={styles.btnStyle1} color="red" title="取消" onPress={() => props.onCancelGoal()} />
-        <Button style={styles.btnStyle2} title="添加" onPress={() => props.onAddGoal(inp)} />
+        <View style={styles.btnAll}>
+          <Button
+            style={styles.btnStyle1}
+            color="red"
+            title="取消"
+            onPress={() => props.onCancelGoal()}
+          />
+          <Button
+            style={styles.btnStyle2}
+            title="添加"
+            onPress={() => props.onAddGoal(inp)}
+          />
+        </View>
         {/* <Button onPress={props.onAddGoal.bind(this, inp)}>添加</Button> */}
       </View>
     </Modal>
+    
   );
 };
 
@@ -31,22 +43,26 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   inputStyle: {
-    width: '80%',
-    borderColor: 'black',
-    borderWidth: 1, 
+    width: "80%",
+    borderColor: "black",
+    borderWidth: 1,
     padding: 10,
     margin: 10,
   },
   btnStyle1: {
-    width: '40%',
+    width: "40%",
     padding: 5,
     marginTop: 10,
-    backgroundColor: '#E75C5C'
+    backgroundColor: "#E75C5C",
   },
   btnStyle2: {
-    width: '40%',
+    width: "40%",
     padding: 5,
-    marginTop: 10
+    marginTop: 10,
+  },
+  btnAll: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly'
   }
 });
 
